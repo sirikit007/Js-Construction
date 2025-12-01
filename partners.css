@@ -1,0 +1,353 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: white;
+    padding: 2rem 0;
+    padding-left: 5%;
+    padding-right: 2%;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+.nav-left .logo {
+    width: 4.3rem;
+    margin: .5rem;
+}
+.faBars {
+    display: none;
+    cursor: pointer;
+    width: 50px;
+    height: 40px;   
+}
+.faBars svg {
+    border: 1px solid lightgray; 
+    border-radius: 5px; 
+} 
+.navLinks ul {
+   display: flex;  
+   align-items: center;
+}
+.navLinks ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 0.4rem 0.8rem;
+}
+.navLinks ul li a {
+    color: #0a0a0a;
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+.navLinks ul li::after {
+    content: "";
+    width: 0%;
+    height: 2px;
+    background: #0a0a0a;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.navLinks ul li:hover:after {
+    width: 100%;
+}
+.navLinks ul li.partners::after {
+    content: "";
+    width: 100%;
+    height: 2px;
+    background: #0a0a0a;
+    display: block;
+    margin: auto;   
+}
+.nav-left {
+    display: flex;
+    align-items: center;
+}
+.nav-left h1 {
+    font-size: 2rem;
+    font-weight: 600; 
+    padding-left: 1rem;    
+}
+
+html {
+    background-image: url(tools_black.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100%;
+}
+.container {
+    width: 100%;      
+    padding: 3% 10%;     
+}
+body {
+    height: 100%;
+}
+.wrapper {
+    min-height: 100%;    
+}  
+footer {
+    background-color: #777;
+    padding: 8px 0;    
+} 
+.containerBottom {
+    width: 100%;
+    margin: 0;    
+    background-color: #777;    
+    color: #ffffff;
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+}
+.containerBottom a {
+    color: #0a0a0a;
+    text-decoration: none;
+    color: #ffffff;
+}
+.containerBottom a::after {
+    content: "";
+    width: 0%;
+    height: 1px;
+    transition: 1s;
+    background: #ffffff;
+    display: block;
+    margin: auto;
+}
+.containerBottom a:hover:after {
+    width: 100%;
+}
+.transbox  {
+    background-color: #ffffff;    
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(35%, 1fr));
+    grid-gap: 30px;
+    padding:0 5% 5%;
+    font-size: 1.25rem;
+    height: 100%;
+    width: 100%;
+    
+}
+.col {
+    border: 1px solid rgb(170, 169, 169);
+    padding: 15px;
+    box-shadow: 0 10px 10px 10px rgb(199, 196, 196);
+    border-radius: 15px;
+    
+}
+.logo {
+    display: flex;
+    align-items: center;    
+}
+.logo img {
+    width: 100px;
+    height: 100px;
+    border: 1px solid #0a0a0a;
+    border-radius: 50%;
+}
+.col .logo p b {
+    padding-left: 1rem;    
+    color: #0a0a0a;
+}
+.col p {
+    padding: 1rem 0;
+}
+.transbox > h3 {
+    padding: 5% 5% 5rem;
+    font-size: 1.25rem;
+}
+.linkSite p {
+    color: #0a0a0a;
+}
+.linkSite .bi{
+    color: #0a0a0a;
+}
+.links a {
+    color: #1877F2;
+    display: flex; 
+    align-items: center; 
+    width: fit-content; 
+}
+.links a i {
+    color: #1877F2;
+    padding-right: 1rem;
+}
+.links a p {
+    text-decoration: underline;    
+}
+.linkFacebook {
+    margin: .1rem;
+}
+
+
+
+
+
+/* ----------------------------------------------------------------media------------------------------------------------------------ */
+
+@media only screen and (max-width: 394px) {      
+    .col p {
+        display: flex;
+        align-items: center;
+    }  
+    .links a i {
+        padding-right: 0.4rem;
+    }
+    
+    .nav-left h1 {
+        font-size: 1.2rem !important;       
+    }
+    nav {
+        padding: 1rem 1rem 1.2rem ;
+    }
+    .nav-left .logo {
+        width: 3rem;
+    }
+    
+    .navLinks ul {        
+        top: 6.3rem !important;
+    }  
+    .container {
+        padding: 3% 7%;
+    }
+}
+
+@media only screen and (max-width: 466px) {
+    .row {
+        grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)) !important; 
+        height: 100%;            
+    }  
+    .links a p {
+        font-size: 0.6rem !important;
+        font-weight: bold;
+    }
+    .transbox h3 {
+        font-size: 1rem;
+    }  
+}
+
+@media only screen and (max-width: 1290px) {
+    .row {
+        font-size: 1rem;
+    }
+}
+@media screen and (max-width: 600px) {
+    .transbox h3 {
+        padding-bottom: 2rem;
+    }
+}
+@media screen and (max-width: 678px) {
+    .nav-left h1 {
+        text-align: center;
+        padding: 0 1rem;
+        font-size: 1.5rem;
+    }
+}
+
+@media only screen and (max-width: 895px) {
+    .row {
+        grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
+    }
+    
+}
+
+@media screen and (max-width: 1600px) {
+    .links a p {
+        font-size: 0.8rem;
+    }
+    .row .col .logo p b {
+        display: block;
+        text-align: center;
+    }
+    
+}
+
+@media screen and (max-width: 1763px) {
+    nav {
+        padding: 1rem 1rem 1.2rem;
+    }
+    .navLinks ul {
+        position: absolute;
+        top: 7.7rem;
+        left: 0;
+        background: #333;
+        width: 100%;
+        overflow: hidden;
+        transition: 0.5s;
+        display: inline-block;
+        text-align: right;
+    }
+    .navLinks ul li {
+        display: block;
+        padding-right: 1.5rem;
+        margin-top: .6rem;
+        margin-bottom: .6rem;
+    }
+    .navLinks ul li a {
+        color: #ffffff;
+        font-size: 1rem;
+    }
+    .faBars {
+        display: block;               
+    }  
+    .frame {
+        align-items: center;        
+    }
+    .navLinks ul li::after {
+        display: none !important;
+    }
+    .container {
+        height: 100%;
+    }
+    .row {
+        height: 100%;
+        padding: 0 5% 5%;        
+    }
+    .transbox {
+        height: 100%;
+    }
+}
+
+
+@media (min-device-width: 320px) and (max-device-width: 1024px) and (orientation: landscape) {
+    .container {
+        height: 100%;
+    }
+    .transbox {
+        height: 100%;
+    }   
+    .statusFull {       
+        bottom: 0;    
+        background: rgba(0, 0, 0, 0.5);
+        color: #ffffff;
+        padding: 10px;
+        border: 0.5px solid #3d3d3d;
+    }
+    .nav-left h1 {
+        font-size: 1.25rem;
+    } 
+    .nav-left .logo {
+        width: 3rem;
+    }
+    nav {
+        padding: 0.5rem 1rem 0.5rem;
+    }
+    .navLinks ul {
+        top: 5.1rem;
+    }
+}

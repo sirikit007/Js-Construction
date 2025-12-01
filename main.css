@@ -1,0 +1,337 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+html {
+    background-image: url(tools_black.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; 
+    height: 100%;      
+}
+
+.container {
+    width: 100%;      
+    padding: 3% 10%;        
+}
+body {
+    height: 100%;
+}
+.wrapper {
+    min-height: 100%;    
+}  
+footer {
+    background-color: #777;
+    padding: 8px 0;    
+} 
+.containerBottom {
+    width: 100%;
+    margin: 0;    
+    background-color: #777;    
+    color: #ffffff;
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+}
+.containerBottom a {
+    color: #0a0a0a;
+    text-decoration: none;
+    color: #ffffff;
+}
+.containerBottom a::after {
+    content: "";
+    width: 0%;
+    height: 1px;
+    transition: 1s;
+    background: #ffffff;
+    display: block;
+    margin: auto;
+}
+.containerBottom a:hover:after {
+    width: 100%;
+}
+.transbox  {
+    background-color: #ffffff;    
+    height: 100%;
+    position: relative;       
+}
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: white;
+    padding: 2rem 0;
+    padding-left: 5%;
+    padding-right: 2%;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+.logo {
+    width: 4.3rem;
+    margin: .5rem;
+}
+.faBars {
+    display: none;
+    cursor: pointer;
+    width: 50px;
+    height: 40px;   
+}
+.faBars svg {
+    border: 1px solid lightgray; 
+    border-radius: 5px; 
+}
+.navLinks ul {
+   display: flex;  
+   align-items: center;
+}
+.navLinks ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 0.4rem 0.8rem;
+}
+.navLinks ul li a {
+    color: #0a0a0a;
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+.navLinks ul li::after {
+    content: "";
+    width: 0%;
+    height: 2px;
+    background: #0a0a0a;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.navLinks ul li:hover:after {
+    width: 100%;
+}
+.navLinks ul .home:after {
+    content: "";
+    height: 2px;
+    background: #0a0a0a;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+    width: 100%;
+}
+.nav-left {
+    display: flex;
+    align-items: center;
+}
+.nav-left h1 {
+    font-size: 2rem;
+    font-weight: 600; 
+    padding-left: 1rem;    
+}
+.imp-links a{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.875rem;
+    width: fit-content;
+    color: #0a0a0a;
+    font-size: 1.25rem;
+    cursor: unset;
+}
+.imp-links a i {
+    width: 1.563rem;
+    margin-right: 0.938rem;
+    color: #0a0a0a;
+}
+
+.imp-links h3 {
+    margin-bottom: 2rem;
+}
+
+.firstTwoPhrases {
+    padding: 0;
+}
+.firstTwoPhrases h3 {
+    padding: 0 !important;
+}
+.main-content {
+    padding: 5%;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.col {
+    box-sizing: border-box;
+    float: left;
+    width: 50%;
+}
+.textContent {
+    
+    padding-left: 10rem;
+    
+}
+.imp-links {
+    margin-left: -1px;
+    padding-left: 5rem;
+    border-right: 1px solid;
+}
+.col h2:first-child {
+    overflow: hidden;
+}
+
+
+.main-content h3 {
+    color: #0a0a0a;
+    font-weight: 400;
+    line-height: 3;
+    font-size: 1.25rem;    
+}
+
+
+/*------------------------------------------------------Media querry for menu-------*/
+@media screen and (max-width: 1763px) {
+    .textContent {
+        padding-right: 3rem;
+    }
+    .main-content h3 {
+        line-height: 2.5rem;
+    }
+    .imp-links {
+        padding-left: 8rem;
+    } 
+    .faBars {
+        display: block;        
+    } 
+    .navLinks ul {
+        position: absolute;
+        top: 7.7rem;
+        left: 0;
+        background: #333;
+        width: 100%;
+        overflow: hidden;
+        transition: 0.5s;
+        display: inline-block;
+        text-align: right;
+    } 
+    .navLinks ul li a {
+        color: #ffffff;
+        font-size: 1rem;
+    }
+    
+    .navLinks ul li {
+        display: block;
+        padding-right: 1.5rem;
+        margin-top: .6rem;
+        margin-bottom: .6rem;
+    }
+   
+    nav {
+        padding: 1rem 1rem 1.2rem; 
+    }
+    .navLinks ul li::after {
+        display: none !important;
+    }
+}
+@media screen and (max-width: 1600px) {    
+    .main-content {
+        display: inline-block;             
+    }
+    .col {
+        width: 100%;
+        border: none;
+        padding: 0;
+    } 
+    .imp-links h3{
+        padding: 0;
+    }
+    .imp-links {
+        padding-left: 0 !important;
+    }
+    .textContent {
+        padding: 0;
+        margin-top: 2.22rem;
+    }
+       
+}
+@media screen and (max-width: 674px) {
+    .main-content {
+        padding: 5% !important;
+    }
+    .main-content h3 {
+        font-size: 1rem;
+    }
+    .main-content a {
+        font-size: 1.1rem;
+    }
+    .imp-links h3 {
+        margin: 0;
+    }
+    .nav-left h1 {
+        text-align: center;
+        padding: 0 1rem;
+        font-size: 1.5rem;
+    }    
+}
+@media screen and (max-width: 394px) {
+    .nav-left h1 {
+        font-size: 1.2rem !important;           
+    }   
+    
+    .logo {
+        width: 3rem;
+    }
+    .navLinks ul {
+        top: 6.3rem;
+    }
+    .container {
+        padding: 3% 7%;
+    }
+}
+
+
+
+
+
+
+
+@media (min-device-width: 320px) and (max-device-width: 1024px) and (orientation: landscape) {
+    .container {
+        height: 100%;
+    }
+    .transbox {
+        height: 100%;
+    }   
+    .statusFull {       
+        bottom: 0;    
+        background: rgba(0, 0, 0, 0.5);
+        color: #ffffff;
+        padding: 10px;
+        border: 0.5px solid #3d3d3d;
+    }
+    .nav-left h1 {
+        font-size: 1.25rem;
+    } 
+    .nav-left .logo {
+        width: 3rem;
+    }
+    nav {
+        padding: 0.5rem 1rem 0.5rem;
+    }
+    .navLinks ul {
+        top: 5.1rem;
+    }
+}
+
+
+
+
+
+

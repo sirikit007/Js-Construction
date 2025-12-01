@@ -1,0 +1,440 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: white;
+    padding: 2rem 0;
+    padding-left: 5%;
+    padding-right: 2%;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+.nav-left .logo {
+    width: 4.3rem;
+    margin: .5rem;
+}
+.faBars {
+    display: none;
+    cursor: pointer;
+    width: 50px;
+    height: 40px;   
+}
+.faBars svg {
+    border: 1px solid lightgray; 
+    border-radius: 5px; 
+}
+ 
+.navLinks ul {
+   display: flex;  
+   align-items: center;
+}
+.navLinks ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 0.4rem 0.8rem;
+}
+.navLinks ul li a {
+    color: #0a0a0a;
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+.navLinks ul li::after {
+    content: "";
+    width: 0%;
+    height: 2px;
+    background: #0a0a0a;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.navLinks ul .ourProjects:after {
+    content: "";
+    height: 2px;
+    background: #0a0a0a;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+    width: 100%;
+}
+
+.navLinks ul li:hover:after {
+    width: 100%;
+}
+
+.photoGallery h4::after {
+    content: "";
+    width: 0%;
+    height: 2px;
+    background: #1877F2;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.photoGallery h4:hover:after {
+    width: 100%;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+}
+.nav-left h1 {
+    font-size: 2rem;
+    font-weight: 600; 
+    padding-left: 1rem;    
+}
+
+html {
+    background-image: url(tools_black.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100%;
+  }
+body {
+    height: 100%;
+}
+.wrapper {
+    min-height: 100%;    
+}  
+footer {
+    background-color: #777;
+    padding: 8px 0;    
+} 
+.container {
+    width: 100%;      
+    padding: 3% 10%;     
+}
+.containerBottom {
+    width: 100%;
+    margin: 0;    
+    background-color: #777;    
+    color: #ffffff;
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+}
+.containerBottom a {
+    color: #0a0a0a;
+    text-decoration: none;
+    color: #ffffff;
+}
+.containerBottom a::after {
+    content: "";
+    width: 0%;
+    height: 1px;
+    transition: 1s;
+    background: #ffffff;
+    display: block;
+    margin: auto;
+}
+.containerBottom a:hover:after {
+    width: 100%;
+}
+.transbox  {
+    background-color: #ffffff;    
+    width: 100%;
+    overflow: auto;
+    position: relative;
+    padding: 5%;
+}
+.transbox h3 {
+    margin-bottom: 5rem;
+    font-size: 1.25rem;
+}
+.row {
+    display: flex;
+    font-size: 1.25rem;  
+    width: 100%;
+    margin: auto;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;        
+}
+
+.row a h4 {
+    margin: 1rem 0 1.5rem;
+    font-size: 19px;
+}
+.status {
+    padding-top: 20px;
+}
+.status img {
+    width: 2rem;
+    padding-right: 5px;
+}
+.frame {   
+    background: #ffffff;
+    color: #0a0a0a;
+    text-align: center;    
+    border-radius: 10px;  
+    position: relative; 
+    justify-content: center;  
+}
+.frame div {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    
+}
+
+.nameBuild i {
+    margin-right: 10px;
+}
+.review {     
+    text-align: center;
+    line-height: 400px;
+    background: #ffffff; 
+    padding: 12px; 
+    overflow-y: auto;
+}
+
+div.cardReview.frame {
+    display: flex;
+    align-items: center; 
+    border: 1px solid rgb(170, 169, 169);
+    box-shadow: 0 10px 10px 10px rgb(199 196 196);  
+    justify-content: flex-start;    
+    
+    width: 400px;
+    flex-direction: column;
+}
+div.cardReview {
+    margin: 0 12px 60px;
+    padding: 30px 10px 10px;       
+}
+.photoGallery i {
+    margin-right: 13px;
+}
+.photoGallery h4 {
+    font-weight: 600;
+    color: #1877F2;
+}
+a.frame {
+    text-decoration: none;
+}
+.nameBuild {
+    padding-bottom: 20px;
+}
+.frame>p {
+    font-style: italic;
+    font-size: 17px;
+}
+
+
+
+
+
+
+
+
+/* ----------------------------------------------------------------media------------------------------------------------------------ */
+@media screen and (max-width: 1763px) {    
+    .navLinks ul {
+        position: absolute;
+        top: 7.7rem;
+        left: 0;
+        background: #333;
+        width: 100%;
+        overflow: hidden;
+        transition: 0.5s;
+        display: inline-block;
+        text-align: right;
+    }
+    .navLinks ul li {
+        display: block;
+        padding-right: 1.5rem;
+        margin-top: .6rem;
+        margin-bottom: .6rem;
+    }
+    .navLinks ul li a {
+        color: #ffffff;
+        font-size: 1rem;
+    }
+    .faBars {
+        display: block;               
+    }  
+    
+    .transbox {
+        height: 100%;
+    }
+    .navLinks ul .ourProjects:after {
+        display: none;
+    }  
+    nav {
+        padding: 1rem 1rem 1.2rem;
+    }   
+}
+@media screen and (max-width: 1600px) {
+    .nav-left h1 {
+        font-size: 1.5rem;
+    }    
+}
+@media screen and (max-width: 1200px) {
+    .row {
+        justify-content: center;
+    }
+    div.cardReview {
+        margin: 0 20px 60px;
+    } 
+}
+
+@media screen and (max-width: 678px) {
+    .nav-left h1 {
+        text-align: center;
+        padding: 0 1rem;
+        font-size: 1.5rem;
+    }   
+
+}
+
+@media screen and (max-width: 600px) {
+    nav {
+        padding: 0;
+        padding-left: 5%;
+        padding-right: 2%;
+    }   
+        
+    .navLinks ul {
+        top: 5.4rem;
+    }
+    .transbox h3 {
+        margin-bottom: 2rem;
+    }
+    div.cardReview.frame {
+        width: 350px;
+    }
+   
+    iframe {
+        width: 300px !important;
+    }
+}
+
+@media screen and (max-width: 538px) {      
+    .row a {
+        margin: 1px 8px;
+        padding: 0;
+    }    
+    iframe {
+        width: 250px !important;
+    }
+    div.cardReview.frame {
+        width: 300px;
+        justify-content: flex-start;
+    } 
+   
+    .row {
+        font-size: 1rem;
+    }
+   
+    div.cardReview {
+        padding: 30px 10px 0;         
+    }
+    .container {
+        padding: 3% 7%;
+    }
+    .revInnerLights iframe {
+        height: 500px!important;
+    } 
+    .frame>p {
+        font-size: 13px;
+    } 
+    .row a h4 {
+        font-size: 15px;
+    }
+    i.fas.fa-images {
+        font-size: 16px !important;
+    }
+    .status img {
+        width: 28px;
+    }
+}
+
+@media screen and (max-width: 440px) {
+    .container {
+        padding: 3% 5%;
+    } 
+    .transbox h3 {
+        font-size: 1rem;
+    }
+}
+@media screen and (max-width: 390px) {
+    div.cardReview.frame {
+        width: 280px;
+    }
+    a.frame {
+        width: 240px;
+    }
+    iframe {
+        width: 235px !important;
+    }    
+}
+@media screen and (max-width: 360px) {
+  
+    .nav-left .logo {
+        width: 3rem;
+    }
+    .nav-left h1 {
+        font-size: 1.2rem;
+    }
+    .navLinks ul {
+        top: 4.2rem ;
+    }
+    div.cardReview.frame {
+        width: 260px;
+    }
+    a.frame {
+        width: 230px;
+    }
+    iframe {
+        width: 215px !important;        
+    }     
+}    
+     
+
+
+
+
+
+
+
+@media (min-device-width: 320px) and (max-device-width: 1024px) and (orientation: landscape) {
+    .container {
+        height: 100%;
+    }
+    .transbox {
+        height: 100%;
+    }   
+    .statusFull {       
+        bottom: 0;    
+        background: rgba(0, 0, 0, 0.5);
+        color: #ffffff;
+        padding: 10px;
+        border: 0.5px solid #3d3d3d;
+    }
+    .nav-left h1 {
+        font-size: 1.25rem;
+    } 
+    .nav-left .logo {
+        width: 3rem;
+    }
+    nav {
+        padding: 0.5rem 1rem 0.5rem;
+    }
+    .navLinks ul {
+        top: 5.1rem;
+    }
+}

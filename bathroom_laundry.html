@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bathroom and Laundryroom Renovation - Wadalba</title>
+    <link rel="stylesheet" href="bathroom_laundry.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;700;800&display=swap');
+    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">    
+    <script src="https://kit.fontawesome.com/cb7c31ad7c.js" crossorigin="anonymous"></script>
+    <script src="bathroom_laundry.js" defer></script>
+    
+</head>
+<body onload="addArrows()">
+    <nav>
+        <div class="nav-left">
+            <img src="logo-1.jpg" class="logo">         
+            <h1>JM Quality 1st Construction</h1>
+        </div>
+        
+        <div class="navLinks" id="navLinks">                
+            <ul id="menuItems">
+                <li><a href="main.html">Home</a></li>
+                <li class="aboutUs"><a href="aboutUs.html">About Us</a></li>
+                <li class="ourProjects"><a href="ourProjects.html">Our Projects</a></li>
+               
+                <li class="partners"><a href="partners.html">Our Trusted Partners</a></li>
+                <li class="contactUs"><a href="contactUs.html">Contact Us</a></li>
+            </ul>
+        </div>       
+        <h1 class="faBars" onclick="menuToggle()">
+            <svg width="50" height="40" fill="currentColor" class="bi bi-list" viewBox="-1 -1 18 18" preserveAspectRatio="none">
+                <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+            </svg>
+        </h1>        
+    </nav>
+    <div class="wrapper">
+        <div class="container">
+            <div class="transbox">
+    
+                <h3 class="wayLine">
+                    <a href="ourProjects.html"> Our Projects</a> <span> &nbsp  /  &nbsp
+                    </span> <span>Bathroom and Laundryroom Renovation <span> &nbsp  &nbsp  </span> - <span> &nbsp  &nbsp  </span> Hamlyn Terrace, NSW</span> 
+                </h3>
+                <div class="row">
+                    <div class="wrapCol">
+                        <div class="fullImg" id="fullImgBox">
+                            <div class="fullSlider active">                            
+                                <img  src="bathroomAndLaundryroom1.jpg" id="fullImg"> 
+                                <div>
+                                    <p class="statusFull">Before</p>
+                                </div>                          
+                            </div>
+                            <div class="fullSlider">                                                        
+                                <img src="bathroomAndLaundryroom2.jpg" id="fullImg">  
+                                <div>
+                                    <p class="statusFull">In progress</p>
+                                </div>                          
+                            </div>
+                            <div class="fullSlider">                           
+                                <img src="bathroomAndLaundryroom3.jpg" id="fullImg"> 
+                                <div>
+                                    <p class="statusFull">In progress</p>
+                                </div>                           
+                            </div>
+                            <div  class="fullSlider">                            
+                                <img src="bathroomAndLaundryroom4.jpg" id="fullImg"> 
+                                <div>
+                                    <p class="statusFull">In progress</p>
+                                </div>                          
+                            </div>
+                            <div class="fullSlider">                            
+                                <img src="bathroomAndLaundryroom5.jpg" id="fullImg">  
+                                <div>
+                                    <p class="statusFull">After</p>
+                                </div>                         
+                            </div>                        
+                            <span onclick="closeFullImg()">X</span>
+                            <div id="arrowPrev">&#10094</div>
+                            <div id="arrowNext">&#10095</div>                        
+                        </div>
+                        <div class="col photo flexWrapper">
+                            <div class="sliderWrapper">
+                                <div class="slide active">
+                                    <img src="bathroomAndLaundryroom1.jpg" onclick="openFullImg(this.src)"> 
+                                    <div class="mobileStatus">
+                                        <p class="status">Before</p> 
+                                    </div>                                
+                                </div>
+                                <div class="slide">
+                                    <img src="bathroomAndLaundryroom2.jpg" onclick="openFullImg(this.src)"> 
+                                    <div>
+                                        <p class="status">In progress</p>
+                                    </div>                                
+                                </div>                            
+                                <div class="slide">
+                                    <img src="bathroomAndLaundryroom3.jpg" onclick="openFullImg(this.src)"> 
+                                    <div>
+                                        <p class="status">In progress</p> 
+                                    </div>
+                                    
+                                </div>
+                                <div class="slide">
+                                    <img src="bathroomAndLaundryroom4.jpg" onclick="openFullImg(this.src)">
+                                    <div>
+                                        <p class="status">In progress</p>
+                                    </div>  
+                                    
+                                </div>
+                                <div class="slide">
+                                    <img src="bathroomAndLaundryroom5.jpg" onclick="openFullImg(this.src)"> 
+                                    <div>
+                                        <p class="status">After</p>
+                                    </div>                                 
+                                </div>                                         
+                                <div id="btnPrev"><p class="btnPrev">&#10094</p></div>
+                                <div id="btnNext"><p class="btnNext">&#10095</p></div>                            
+                            </div>                                                                                    
+                        </div>
+                                            
+                    </div>
+                    <div class="dotsWrapper">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span> 
+                    </div>                 
+                </div>           
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p class="containerBottom">© 2022 - Website by <a href="https://www.linkedin.com/in/svetamoroz/">  <span> &nbsp;</span>Svetlana Moroz</a> </p>
+    </footer> 
+    
+
+
+
+
+
+    <script>
+        var menuItems = document.getElementById('menuItems');
+        menuItems.style.maxHeight = '0px';
+        function menuToggle() {
+            if(menuItems.style.maxHeight == '0px') {
+                menuItems.style.maxHeight = '300px';
+            } else {
+                menuItems.style.maxHeight = '0px';
+            }
+        }
+    </script>
+    
+</body>
+</html>
