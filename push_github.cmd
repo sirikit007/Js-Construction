@@ -1,4 +1,4 @@
-rem FILE: push_github.cmd
+@rem FILE: push_github.cmd
 @echo off
 chcp 65001 >nul
 setlocal EnableExtensions DisableDelayedExpansion
@@ -9,7 +9,7 @@ if not defined BRANCH set "BRANCH=main"
 
 if not defined REPO_URL (
   echo ERROR: Repo URL is missing.
-  echo Usage: push_github.cmd https://github.com/user/repo.git [branch]
+  echo Usage: push_github.cmd "https://github.com/user/repo.git" [https://github.com/sirikit007/Js-Construction.git]
   exit /b 2
 )
 
@@ -32,14 +32,19 @@ if exist ".git" (
 )
 
 echo INFO: Adding files...
-git add -A
+git -c core.fsmonitor=false add -A
 if errorlevel 1 exit /b 11
 
 echo INFO: Creating commit...
 git diff --cached --quiet
 if errorlevel 1 (
   git commit -m "Initial commit"
-  if errorlevel 1 exit /b 12
+  if errorlevel 1 (
+    echo ERROR: Commit failed. If you see "Author identity unknown", run:
+    echo git config --global user.name "Your Name"
+    echo git config --global user.email "you@example.com"
+    exit /b 12
+  )
 ) else (
   echo INFO: Nothing to commit.
 )
